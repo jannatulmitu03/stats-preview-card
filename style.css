@@ -1,0 +1,185 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+--main-bg-color: hsl(233, 47%, 7%);
+--card-bg-color: hsl(244, 38%, 16%);
+--violet: hsl(277, 64%, 61%);
+
+--heading: hsl(0, 0%, 100%);
+--main-text: hsla(0, 0%, 100%, 0.75);
+--start-heading: hsla(0, 0%, 100%, 0.6);
+
+--font-family: "Inter", sans-serif;
+
+font-size: .625rem;
+
+}
+
+img{
+    max-width: 100%;
+}
+
+
+body{
+    background-color: var(--main-bg-color);
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+
+
+}
+
+.container{
+    max-width: 1000px;
+    margin: auto;
+    background-color: var(--card-bg-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    margin: 0 2rem;
+    margin-bottom: 3rem;
+}
+
+
+
+.hero-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-img{
+    position: relative;
+}
+.hero-img::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: hsla(277, 64%, 61%, 0.478);
+}
+
+.hero-content{
+    padding: 8% 13%;
+}
+
+span{
+    color: var(--violet);
+}
+.hero-blog h1{
+    padding-bottom: 2.3rem;
+    color: var(--heading);
+    font-size: 3.5rem;
+    font-weight: 700; 
+}
+
+.hero-blog p{
+    
+    color: var(--main-text);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+}
+
+.hero-countdown{
+    display: flex;
+    justify-content: space-between;
+    padding-top:6rem ;
+}
+.hero-countdown p{
+    color: var(--start-heading);
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: .5rem;
+}
+
+.hero-countdown h4{
+    color: var(--heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+footer{
+    padding: 0 2rem;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution p{
+    color: white;
+}
+.attribution a{
+    color: white;
+}
+
+@media (max-width:768) {
+
+    .hero-content{
+        padding: 8% 5%;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+    h4{
+        font-size: 1.8rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:600px) {
+
+    body{
+       padding: 40px 0;
+
+
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-img{
+        order: -1;
+    }
+    .hero-content{
+       padding: 10% 8%;
+    }
+    .hero-content h1{
+       font-size: 3rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
+
+    h4{
+        font-size: 2rem;
+    }
+    .hero-countdown{
+        flex-direction: column;
+        gap: 2.5rem;
+        padding-top:3rem ;
+    }
+    .hero-countdown p{
+        margin-top: .3rem;
+    }
+
+    
+}
