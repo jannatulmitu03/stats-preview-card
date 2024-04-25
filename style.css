@@ -32,9 +32,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 0;
-
-
+    height: 100vh;
 }
 
 .container{
@@ -42,11 +40,12 @@ body{
     margin: auto;
     background-color: var(--card-bg-color);
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     border-radius: 1.2rem;
     overflow: hidden;
     margin: 0 2rem;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
 }
 
 
@@ -60,6 +59,8 @@ body{
 
 .hero-img{
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 .hero-img::before{
     content: "";
@@ -105,15 +106,11 @@ span{
     margin-top: .5rem;
 }
 
-.hero-countdown h4{
+.hero-countdown h2{
     color: var(--heading);
     font-size: 2.5rem;
     font-weight: 700;
 }
-footer{
-    padding: 0 2rem;
-}
-
 
 
 .attribution { font-size: 11px; text-align: center; }
@@ -144,9 +141,11 @@ footer{
 @media (max-width:600px) {
 
     body{
-       padding: 40px 0;
+        height: auto;
+    }
 
-
+    main {
+        margin: 60px 0;
     }
 
     .container{
